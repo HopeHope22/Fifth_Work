@@ -11,13 +11,14 @@ import static com.codeborne.selenide.Selenide.$x;
 public class TestGithub {
     Components Components1 = new Components();
     POHomework PageObject = new POHomework();
+    String desiredValue = "selenide";
 
     @Test
     void SearchSomePage(){
         Components1
                 .openPage();
         PageObject
-                .setValue()
+                .setValue(desiredValue)
                 .selectDesired()
                 .clickOnWikiButton()
                 .clickForShowMore();
@@ -30,7 +31,7 @@ public class TestGithub {
         Components1
                 .openPage();
         PageObject
-                .setValue()
+                .setValue(desiredValue)
                 .selectDesired()
                 .clickOnWikiButton()
                 .clickForShowMore()

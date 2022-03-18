@@ -12,8 +12,6 @@ public class POHomework {
     private SelenideElement selenideWord = $x("//*[.='selenide/selenide']");
     private SelenideElement softAssertionsSection = $x("//*[.='SoftAssertions']");
 
-    private String desiredValue = "selenide";
-
     public POHomework clickOnWikiButton (){
         aboutButtonWiki.click();
         return this;
@@ -24,7 +22,7 @@ public class POHomework {
         return this;
     }
 
-    public POHomework setValue (){
+    public POHomework setValue (String desiredValue){
         searchInput.setValue(desiredValue).pressEnter();
         return this;
     }
